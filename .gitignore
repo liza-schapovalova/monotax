@@ -2,7 +2,8 @@
 /.venv
 /.vscode
 /Makefile.venv
-/models
+/output
+/templates
 __pycache__
 *.log
 .DS_Store
