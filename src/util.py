@@ -68,3 +68,22 @@ def get_month_epoch_bounds(year: int, month: int) -> tuple[int, int]:
     end_epoch = int(end_date.timestamp())
     
     return start_epoch, end_epoch
+
+def add_dict(a: dict[str, float], b: dict[str, float]) -> dict[str, float]:
+    result = a.copy()
+
+    for key, value in b.items():
+        if key not in result:
+            result[key] = value
+        else:
+            result[key] += value
+    
+    return result
+
+def sum_dict(a: dict[str, float]) -> float:
+    result = 0
+
+    for _, value in a.items():
+        result += value
+    
+    return result
